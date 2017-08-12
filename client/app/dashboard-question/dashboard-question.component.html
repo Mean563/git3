@@ -1,0 +1,87 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="question">
+       <h4>Who is next chief minister for Andhra pradesh?</h4>
+    </div>
+   
+  </div>
+ 
+
+  <div class="row"> 
+
+    <div class="col-md-2 col-sm-2 col-xs-2 left_col" >
+       <div class="row">
+        <div class="col-md-6 col-sm-6 col-xs-6" >
+              <div class="image1">
+          <img style="margin-left: 2px;" src="./assets/janasena1.jpg" height="83px" width="100%">
+      </div>
+          </div>
+      </div>
+       <div class="row">
+        <div class="col-md-6 col-sm-6 col-xs-6" >
+             <div class="image1">
+          <img style="margin-left: 2px;" src="./assets/tdp1.png" height="80px" width="100%">
+      </div>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-md-6 col-sm-6 col-xs-6" >
+             <div class="image1">
+          <img style="margin-left: 2px;"  src="./assets/ysrcp2.jpg" height="83px" width="100%">
+      </div>
+          </div>
+      </div>
+      
+      
+    
+     
+     
+
+    </div>
+    <div class="col-md-1 col-sm-1 col-xs-1"></div>
+    <div class="col-md-6 col-sm-6 col-xs-6 myAnswer">
+        <form [formGroup]="questionForm" (ngSubmit)="login()">
+    <div>
+       <div class="ui-g-12"><p-radioButton name="group1" value="JanaSenaParty" label="Jana Sena Party" formControlName="groupname"></p-radioButton></div>
+       <div class="ui-g-12"><p-radioButton name="group1" value="TeluguDesamParty" label="Telugu Desam Party" formControlName="groupname"></p-radioButton></div>
+       <div class="ui-g-12"><p-radioButton name="group1" value="YSRCongressParty" label="YSR Congress Party" formControlName="groupname"></p-radioButton></div>
+      <div class="ui-g-12"><p-radioButton name="group1" value="Congress" label="Congress" formControlName="groupname"></p-radioButton></div>
+       <div class="ui-g-12"><p-radioButton name="group1" value="LokSattaParty" label="Lok Satta Party" formControlName="groupname"></p-radioButton></div>
+       <div class="ui-g-12"><p-radioButton name="group1" value="Others" label="Others" formControlName="groupname"></p-radioButton></div>
+  </div>
+ 
+ <!--*ngIf="groupname._status == 'VALID' "-->
+
+    <div class="form_div">
+      <div class="input-group" [ngClass]="setClassEmail()">
+        <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+        <input class="form-control" type="email" name="email" formControlName="email" placeholder="Email" autofocus>
+      </div>
+      <div class="input-group" [ngClass]="setClassPassword()">
+        <span class="input-group-addon"><i class="fa fa-key"></i></span>
+        <input class="form-control" type="password" name="password" formControlName="password" placeholder="Password">
+      </div>
+         <button class="btn btn-primary btn_class" type="submit" [disabled]="!questionForm.valid"><i class="fa fa-sign-in"></i> Poll Your Answer</button>
+    </div>
+        
+   
+    </form>
+    </div>
+    <div class="col-md-1 col-sm-1 col-xs-1"></div>
+    
+    <div class="col-md-2 col-sm-2 col-xs-2 right_col">
+      <div class="image1">
+          <img style="margin-left: 2px;" src="./assets/loksatta1.jpg" height="83px">  
+      </div>
+      <div class="image1">
+            <img style="margin-left:4px;margin-top:15px;" src="./assets/congress.png" height="83px">
+      </div>
+      <div class="image1">
+          <img style="margin-left: 2px;" src="./assets/others.jpg" height="83px">
+      </div>
+    </div>
+
+
+
+  </div>
+</div>
