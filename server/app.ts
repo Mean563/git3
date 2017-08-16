@@ -9,14 +9,14 @@ import setRoutes from './routes';
 
 const app = express();
 dotenv.load({ path: '.env' });
-app.set('port', (process.env.PORT || 3000));
+app.set('port', (process.env.PORT || 2200));
 
 app.use('/', express.static(path.join(__dirname, '../public')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(morgan('dev'));
-mongoose.connect(process.env.MONGODB_URI);
+mongoose.connect('mongodb://bhumi:bhumibroker2017@ds119081.mlab.com:19081/mydata');
 const db = mongoose.connection;
 (<any>mongoose).Promise = global.Promise;
 
